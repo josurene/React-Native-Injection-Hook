@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {getInjection} from "../Infrastructure/InjectionConfiguration";
 
-const useInjectionHookAuto = <A,>(className: string): A | undefined => {
+const useInjectionHook = <A,>(className: string): A | undefined => {
     const [instantiatedClass, setInstantiated] = useState<A>();
 
     useEffect(() => {
@@ -12,4 +12,4 @@ const useInjectionHookAuto = <A,>(className: string): A | undefined => {
     return instantiatedClass;
 }
 
-export default useInjectionHookAuto;
+export default useInjectionHook;

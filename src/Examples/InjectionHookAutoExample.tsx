@@ -1,17 +1,17 @@
 import React from 'react';
 import {View} from 'react-native';
-import useInjectionHookAuto from "@Hooks/InjectionHookAuto";
+import useInjectionHook from "@Hooks/InjectionHookAuto";
 import ExampleService from "./Domain/Service/ExampleService";
-import useInjectionHookAutoMemo from "@Hooks/InjectionHookAutoMemo";
+import useInjectionHookMemo from "@Hooks/InjectionHookAutoMemo";
 
 export interface Props {
 }
 
 const InjectionHookExample: React.FC<Props> = () => {
 
-    const autoImplementation = useInjectionHookAuto<ExampleService>('ExampleService');
+    const autoImplementation = useInjectionHook<ExampleService>('ExampleService');
     //autoImplementation?.test();
-    const autoImplementationMemo = useInjectionHookAutoMemo<ExampleService>('ExampleService');
+    const autoImplementationMemo = useInjectionHookMemo<ExampleService>('ExampleService');
     //autoImplementationMemo.test();
     return (
         <View></View>

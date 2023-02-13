@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import useInjectionHook from "@Hooks/InjectionHook";
+import useInjectionHookPOC from "@Hooks/InjectionHookPOC";
 import ExampleServiceImplementation from "./Infrastructure/Service/ExampleServiceImplementation";
 
 export interface Props {
@@ -8,7 +8,7 @@ export interface Props {
 
 const InjectionHookExample: React.FC<Props> = () => {
 
-    const implementation = useInjectionHook(ExampleServiceImplementation);
+    const implementation = useInjectionHookPOC(ExampleServiceImplementation);
 
     return (
         <View></View>
